@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>calculator with grid</title>
+    <style>
+h1{
+    color: rgb(0,127,127);
+    font-size: 50px;
+    text-align: center;
+}
+#container{
+    height: 350px;
+    width: 22%;
+ 
+    margin-top: 40px;
+    margin: auto;
+    margin-top: 70px;
+display: grid;
+padding: 40px;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(5,1fr);
+gap: 10px;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#container>div{
+   
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container>div:nth-child(1){
+    grid-area: 1/1/2/span 4;
+}
+.blackback{
+    background-color: black;
+    color: white;
+
+}
+#redback{
+    background-color: red;
+color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Masai Investors</h1>
+    <div id="container">
+    <div></div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="blackback">+</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div class="blackback">-</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div class="blackback">X</div>
+    <div id="redback">C</div>
+    <div>0</div>
+    <div class="blackback">=</div>
+    <div class="blackback">/</div>
+    </div>
+    
+</body>
+</html>
