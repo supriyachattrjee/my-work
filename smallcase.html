@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web-101 C1</title>
+  <style>
+    .top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: 400px;
+      width: 82%;
+      margin: auto;
+
+      gap: 120px;
+
+    }
+
+
+
+    .top-left>img {
+      width: 100%;
+      height: 50%;
+    }
+
+    .top-right>div>img {
+      width: 35%;
+
+    }
+
+
+
+    .top-right>div {
+      display: flex;
+    }
+
+    .mid-heading {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .mid-heading>p {
+      margin-top: -15px;
+    }
+
+    .mid-container {
+      display: grid;
+      width: 82%;
+      height: 170px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 65px;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+
+    }
+
+    .mid-container>div>img {
+      width: 30%;
+      margin-bottom: -10px;
+    }
+
+    .mid-container>div>p {
+      margin-top: -15px;
+    }
+
+    .mid-container>div {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 10% 10% 0% 10%;
+      background-color: rgb(255, 255, 255);
+
+    }
+
+    #mid-back {
+      background-image: url("https://www.smallcase.com/static/images/svg/InvIdeasPatternRight.svg");
+      background-color: rgb(249, 253, 255);
+    }
+
+    /* Write necessery Styles Here  */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="top-left">
+        <h1>A smallcase is a basket of stocks that reflects an idea</h1>
+        <p>smallcases are portfolios of stocks or ETFs, that track a theme, strategy or objective</p>
+        <img src="https://www.smallcase.com/static/images/whatissmallcase-thumbnail.jpg" alt="">
+        <!-- Here put one h1 tag, one p tag and one img tag  -->
+      </div>
+      <div class="top-right">
+        <div>
+          <img src="https://www.smallcase.com/static/pngs/what-is-smallcase/1.webp" alt="">
+          <div>
+            <h2>Simple to understand</h2>
+            <p>smallcases are modern investing products based on simple ideas you can understand.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://www.smallcase.com/static/pngs/what-is-smallcase/2.webp" alt="">
+          <div>
+            <h2>
+              Managed by professionals</h2>
+            <p>smallcases are created by India’s leading finance experts & backed by solid research.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://www.smallcase.com/static/pngs/what-is-smallcase/3.webp" alt="">
+          <div>
+            <h2>
+              Designed for you</h2>
+            <p>smallcases are fully customizable. Edit your smallcase constituents any time or create your own
+              smallcase.</p>
+          </div>
+
+        </div>
+
+        <!-- 3 Child divs should come here. Each div should have one image one h2 tag and one p tag  -->
+      </div>
+    </div>
+
+    <div id="mid-back">
+      <div class="mid-heading">
+        <h1>There is a smallcase for everyone</h1>
+        <p>Looking to start with a small investment or thinking of low volitility? Choose from a diverse menu</p>
+        <!-- here you have to put one h1 tag and one p tag  -->
+      </div>
+      <div class="mid-container">
+
+        <div>
+          <img src="https://www.smallcase.com/static/images/svg/LowVolatility.svg" alt="">
+          <h2>Low Volatility</h2>
+          <p>Go for the stable return for stable volitility return</p>
+        </div>
+
+        <div>
+          <img src="https://www.smallcase.com/static/images/svg/Thematic.svg" alt="">
+          <h2>Thematic</h2>
+          <p>Go for the stable return for stable volitility return</p>
+        </div>
+
+        <div>
+          <img src="https://www.smallcase.com/static/images/svg/LowInv.svg" alt="">
+          <h2>Low Inv. Amount</h2>
+          <p>Go for the stable return for stable volitility return</p>
+        </div>
+
+        <div>
+          <img src="https://www.smallcase.com/static/images/svg/Tracker.svg" alt="">
+          <h2>Trackers</h2>
+          <p>Go for the stable return for stable volitility return</p>
+        </div>
+        <!-- Here You should have 4 Child divs which will make the cards. Each card will have one image one h2 tag and one p tag  -->
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
