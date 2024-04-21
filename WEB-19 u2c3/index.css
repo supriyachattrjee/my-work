@@ -1,0 +1,80 @@
+/* Fill CSS here */
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(41, 96, 160);
+  word-spacing: 5px;
+}
+
+div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+  height: auto;
+}
+form {
+  width: 25%;
+  height: 450px;
+
+  padding: 3%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+form > input,
+form > select {
+  width: 85%;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+}
+#submit {
+  background-color: rgb(43, 97, 158);
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+  color: white;
+}
+#submit:hover {
+  background-color: brown;
+  color: aliceblue;
+  font-size: 22px;
+  width: 89%;
+  height: 45px;
+  cursor: pointer;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table > thead {
+  background-color: hsl(204, 95%, 34%);
+  color: aliceblue;
+}
+form > label {
+  font-weight: 800;
+}
+.delete {
+  background-color: crimson;
+  color: white;
+}
+.delete:hover {
+  cursor: pointer;
+  background-color: rgb(73, 1, 1);
+  color: rgb(233, 248, 93);
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web-101 C2</title>
+  <style>
+    .top {
+      width: 80%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+
+
+      gap: 100px;
+      margin: auto;
+
+
+    }
+
+    .top>div {
+      width: 50%;
+    }
+
+
+    .top>div:nth-child(2)>img {
+      width: 100%;
+    }
+
+    .top>div:nth-child(1)>p {
+      line-height: 20px;
+    }
+
+    .mid>#mid-heading {
+      width: 40%;
+      text-align: center;
+      margin: auto;
+
+    }
+
+    .mid>#mid-heading>p {
+      margin-top: -15px;
+    }
+
+    .mid {
+      margin-top: 50px;
+    }
+
+    #mid-heading+div {
+      width: 80%;
+      height: auto;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 15px;
+    }
+
+    #mid-heading+div>div {
+      background-color: hsl(15, 100%, 70%);
+      text-align: center;
+      padding: 10% 20% 10% 10%;
+
+    }
+
+    #mid-heading+div>div>img {
+      width: 40%;
+    }
+
+    #mid-heading+div>div>p {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .bottom {
+      margin-top: 50px;
+
+
+    }
+
+    .bottom>div:nth-child(1) {
+      width: 30%;
+      text-align: center;
+      margin: auto;
+
+
+    }
+
+    .bottom>div:nth-child(1)>p {
+      margin-top: -15px;
+    }
+
+    .bottom>div:nth-child(2) {
+      margin: auto;
+      width: 80%;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      text-align: center;
+
+      margin-top: 50px;
+
+
+
+    }
+
+
+
+    .bottom>div:nth-child(2)>div>img {
+      width: 100%;
+    }
+
+    .bottom>div:nth-child(2)>div>h2 {
+      margin-top: 0px;
+    }
+
+    .bottom>div:nth-child(2)>div>button {
+      margin-top: -10px;
+      padding: 5px 10px;
+      background-color: transparent;
+    }
+
+    @media all and (min-width: 601px) and (max-width:1101px) {
+
+      /* Medium Screen Styles  */
+      .top {
+        flex-direction: column;
+        gap: 30px;
+
+      }
+
+      .top>div {
+        width: 70%;
+        margin: auto;
+      }
+
+      #mid-heading+div {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+
+
+      }
+
+      .mid>#mid-heading {
+        width: 60%;
+
+
+      }
+
+      .bottom>div:nth-child(2) {
+
+
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+
+
+
+
+      }
+
+      .bottom>div:nth-child(1) {
+        width: 70%;
+
+
+
+      }
+
+
+    }
+
+    @media all and (max-width: 601px) and (min-width:200px) {
+
+      /* Small Screen Styles  */
+      .top {
+        flex-direction: column;
+        gap: 30px;
+
+      }
+
+      .top>div {
+        width: 100%;
+        margin: auto;
+      }
+
+      #mid-heading+div {
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, auto);
+
+
+      }
+
+      .mid>#mid-heading {
+        width: 75%;
+
+
+      }
+
+      .bottom>div:nth-child(2) {
+
+
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+
+
+
+
+      }
+
+      .bottom>div:nth-child(1) {
+        width: 80%;
+
+
+
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div>
+      <h1>Sobre a Platforma De Gesto Market Up</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore reru
+        exercitationem officia corporis tenetur aliquid quasi nemo neque natus debitis
+        architecto, et dolor quibusdam dignissimos nisi doloribus quos quia dolorem necessitatibus, ad voluptate
+        distinctio. Obcaecati hic rem facilis ut iste amet, <br><br>tenetur perspiciatis doloribus voluptates
+        ullam architecto
+        sed eos. Quidem vitae dolorem incidunt deserunt cum labore harum quae beatae voluptatem eos, repellendus ad
+        accusamus sit tenetur voluptatum, corrupti est quaerat. Deleniti, et! Deleniti quaerat cupiditate ducimus qui
+        dolorem unde quis voluptas nemo dolore corporis nam
+        repellendus provident. Quo recusandae enim, quas labore mollitia exercitationem, quae soluta culpa hic
+        <br><br>
+        distinctio assumenda ullam similique facere ipsum sit exped
+        ita in voluptatum consequatur libero nulla inventore maxime nostrum blanditiis. Possimus maiores alias libero!
+      </p>
+    </div>
+    <div><img src="https://marketup.com/wp-content/uploads/2022/06/Home-Mock.png" alt=""></div>
+    <!-- Two Divs should be inside here  -->
+  </div>
+
+
+  <div class="mid">
+    <div id="mid-heading">
+      <h2>Recursos Relacionados</h2>
+      <p> ita in voluptatum consequatur libero nulla inventore maxime nostrum blanditiis. distinctio assumenda ullam
+        similique facere ipsum sit exped</p>
+    </div>
+    <div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+      <div>
+        <img src="logo.jfif" alt="">
+        <h3>Para suas vendas</h3>
+        <p>Frente de caixa (PDA) Loja Virtual Pedidos</p>
+      </div>
+    </div>
+    <!-- Two Divs should be inside here and on the second div you have to put 8 caards  -->
+  </div>
+  <div class="bottom">
+    <div>
+      <h2>Conheca nossos segmentos</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, labore.</p>
+    </div>
+    <div>
+      <div>
+        <img
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png"
+          alt="">
+        <h2>Lorem ipsum dolar sit amet.</h2>
+        <button>SAIBA MAIS</button>
+      </div>
+      <div><img
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png"
+          alt="">
+        <h2>Lorem ipsum dolar sit amet.</h2>
+        <button>SAIBA MAIS</button>
+      </div>
+      <div><img
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png"
+          alt="">
+        <h2>Lorem ipsum dolar sit amet.</h2>
+        <button>SAIBA MAIS</button>
+      </div>
+      <div><img
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png"
+          alt="">
+        <h2>Lorem ipsum dolar sit amet.</h2>
+        <button>SAIBA MAIS</button>
+
+      </div>
+      <!-- Two Divs should be inside here and on the second div you have to put 4 caards  -->
+    </div>
+
+
+</body>
+
+</html>

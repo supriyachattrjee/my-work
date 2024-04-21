@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        margin-bottom: 20px;
+        width: 20%;
+        height: 30px;
+        margin-left: 60px;
+        border-radius: 10px;
+      }
+      input:hover {
+        background-color: rgb(242, 249, 255);
+      }
+      label {
+        margin-left: 70px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #submit {
+        background-color: transparent;
+        border: 0.5px double blue;
+        padding: 7px 15px;
+        color: rgb(17, 8, 8);
+        background-color: aqua;
+      }
+      #submit:hover {
+        cursor: pointer;
+        background-color: rgb(102, 36, 189);
+        border: none;
+        color: white;
+      }
+      h1 {
+        text-align: center;
+        font-size: 25px;
+        text-decoration: underline;
+      }
+      a {
+        color: black;
+        font-size: 20px;
+        margin-left: 150px;
+        text-decoration: none;
+        font-weight: 800;
+        color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Sign Up</h1>
+    <form>
+      <label for="">email</label>
+      <br />
+      <input id="email" type="email" /><br />
+      <label for="">password</label> <br />
+
+      <input id="password" type="password" />
+      <br />
+      <label for="">number</label>
+      <br />
+      <input id="number" type="number" />
+      <br />
+      <input id="submit" type="submit" />
+    </form>
+    <br />
+    <a href="Login.html">Login</a>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", signup);
+
+  function signup() {
+    let mail = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
+    let number = document.querySelector("#number").value;
+    if (mail == "") {
+      alert("plese type your email");
+    } else if (password.length < 8 || security(password)) {
+      alert(
+        "plese type minimum eight digit password with some lowercase uppercase and special carecter"
+      );
+    } else if (number.length < 10 || number.length > 10) {
+      alert("plese type your actual number");
+    } else {
+      alert("Sign Up sucessfully plese click login for login");
+
+      localStorage.setItem("email", mail);
+      localStorage.setItem("password", password);
+    }
+    console.log(password);
+    console.log(security(password));
+  }
+  function security(str) {
+    let lower = "abcdefghijklmnopqrstuvwxyz";
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let specialc = '!@#$%^&*()-_+={}[]`~:;"/\\<>,.?';
+    let count = 0;
+    let count1 = 0;
+    let count2 = 0;
+    for (let i = 0; i < str.length; i++) {
+      for (let j = 0; j < lower.length; j++) {
+        if (str[i] == lower[j]) {
+          count++;
+        } else if (str[i] == upper[j]) {
+          count1++;
+        }
+      }
+
+      for (let j = 0; j < specialc.length; j++) {
+        if (str[i] == specialc[j]) {
+          count2++;
+        }
+      }
+    }
+
+    if (count == 0 || count1 == 0 || count2 == 0) {
+      return true;
+    } else return false;
+  }
+</script>

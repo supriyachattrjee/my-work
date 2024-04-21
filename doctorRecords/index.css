@@ -1,0 +1,80 @@
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  word-spacing: 4px;
+  color: rgb(43, 96, 162);
+}
+h1 + div {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  width: 90%;
+  height: auto;
+}
+form {
+  width: 27%;
+  padding: 3%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form > input,
+form > select {
+  width: 90%;
+  height: 35px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+form > label {
+  font-weight: 800;
+}
+#submit {
+  border-radius: 15px;
+  background-color: rgb(43, 97, 158);
+  color: white;
+  border: none;
+  font-size: 17px;
+}
+#submit:hover {
+  cursor: pointer;
+  background-color: rgb(3, 153, 28);
+  color: aliceblue;
+  font-size: 20px;
+  width: 95%;
+  height: 38px;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+thead {
+  background-color: rgb(43, 97, 158);
+  color: white;
+}
+
+tbody > tr > td:nth-child(8) {
+  background-color: red;
+  color: white;
+}
+tbody > tr > td:nth-child(8):hover {
+  cursor: pointer;
+  background-color: rgb(119, 4, 4);
+  color: rgb(159, 206, 247);
+}
