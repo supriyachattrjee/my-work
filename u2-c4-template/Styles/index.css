@@ -1,0 +1,36 @@
+/* Write css related to the Home page here  */
+
+#create {
+  height: 450px;
+  margin: auto;
+  width: 30%;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  padding: 2% 3%;
+}
+#create > h1 {
+  text-align: center;
+}
+form {
+  width: 100%;
+}
+form > input,
+form,
+select {
+  width: 100%;
+  height: 35px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#submit:hover {
+  background-color: coral;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: auto;
+  border: none;
+}

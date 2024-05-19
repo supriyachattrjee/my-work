@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="common.css" />
+
+    <style>
+      form {
+        margin: auto;
+        width: 30%;
+        height: auto;
+        padding: 15px 20px;
+
+        margin-top: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: crimson;
+        text-align: center;
+      }
+      form > input {
+        width: 100%;
+        margin-top: 30px;
+        height: 35px;
+      }
+      #submit:hover {
+        cursor: pointer;
+        border-radius: 15px;
+        border: none;
+        background-color: crimson;
+        color: rgb(255, 216, 216);
+        font-size: 20px;
+        font-weight: 800;
+        padding: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"><h3></h3></div>
+    <a href="Dashboard.html"><h2>Dashboard</h2></a>
+    <form action="">
+      <input type="text" placeholder="type your name" id="name" />
+
+      <input type="text" placeholder="type your course" id="course" />
+      <input type="text" placeholder="type your unit" id="unit" />
+      <input type="text" id="image" placeholder="image link" /><input
+        type="text"
+        placeholder="type your batch"
+        id="batch"
+      />
+
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+  <script src="Homepage.js"></script>
+  <script src="common.js"></script>
+</html>

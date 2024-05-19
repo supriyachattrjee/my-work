@@ -1,0 +1,50 @@
+#show-products {
+  background-color: none;
+  border: 1px solid blue;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 800;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+#show-products:hover {
+  cursor: pointer;
+
+  border: none;
+}
+#show-products {
+  background-color: none;
+  text-decoration: none;
+  color: crimson;
+}
+#show-products:hover {
+  color: brown;
+  background-color: aliceblue;
+}
+#container > div:nth-child(2) {
+  width: 25%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+form {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+form > input {
+  width: 100%;
+  margin-bottom: 25px;
+  height: 25px;
+}
+#submit:hover {
+  border-radius: 10px;
+  border: none;
+  background-color: aqua;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 800;
+}

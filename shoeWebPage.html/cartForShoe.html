@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart page</title>
+    <style>
+      a > button {
+        margin-bottom: 30px;
+        margin-left: 100px;
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 2px dashed rgb(0, 255, 128);
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(236, 130, 0);
+      }
+      a > button:hover {
+        cursor: pointer;
+        border: none;
+        background-color: aqua;
+        color: crimson;
+        font-size: 17px;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto);
+        gap: 25px;
+      }
+      #container > div {
+        padding-bottom: 20px;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+          rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+      }
+      #container > div > img {
+        width: 100%;
+      }
+      #container > div > button {
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 2px dashed rgb(0, 255, 128);
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(236, 130, 0);
+      }
+      #container > div > button:hover {
+        cursor: pointer;
+        border: none;
+        background-color: aqua;
+        color: crimson;
+        font-size: 17px;
+      }
+      h2 + input {
+        display: block;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        padding: 10xp;
+        width: 200px;
+        height: 30px;
+        border: 2px solid blue;
+        border-radius: 10px;
+      }
+      input + button {
+        display: block;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        margin-left: 100px;
+      }
+      #payment {
+        width: 35%;
+        height: auto;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+        margin: 40px auto;
+        padding: 10px 0px 10px 30px;
+      }
+      #payment > input {
+        width: 75%;
+        height: 15%;
+        margin-bottom: 4%;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 10px;
+        border: 2px dotted rgb(0, 35, 148);
+      }
+      #payment > label {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Total Item = <span></span></h1>
+    <h2>Total price = <span></span></h2>
+    <input type="text" placeholder="type your promocode" />
+    <button>Apply Promo</button>
+
+    <form action="" id="payment">
+      <label for="">Name</label><br />
+
+      <input id="name" type="text" placeholder="type your name" />
+      <br />
+      <label for="">Card Number</label><br />
+
+      <input
+        id="cardNumber"
+        type="number"
+        placeholder="type your card number"
+      />
+
+      <br />
+      <label for="">Expiry Date</label>
+      <br />
+      <input id="Expiry" type="date" />
+      <br />
+      <label for="">CVV</label>
+      <br />
+      <input id="cvv" type="number" placeholder="type your CVV here" />
+      <br />
+      <input type="submit" />
+    </form>
+
+    <a href="mens.html"><button>Mens Page</button></a>
+    <a href="womens.html"><button>Womens Page</button></a>
+
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  let dataArr = JSON.parse(localStorage.getItem("data"));
+  let pricearr = [];
+  let total_item = dataArr.length;
+  document.querySelector("h1>span").innerText = total_item;
+  cart_print(dataArr);
+
+  function cart_print(int) {
+    pricearr = [];
+    document.querySelector("#container").innerText = "";
+    int.forEach(function (el, i) {
+      let newdiv = document.createElement("div");
+      let imgt = document.createElement("img");
+      imgt.src = el.image_url;
+
+      let h3t = document.createElement("h3");
+      h3t.innerText = el.name;
+
+      let pt = document.createElement("p");
+      pt.innerText = el.price;
+
+      let buttont = document.createElement("button");
+      buttont.innerText = "Delete";
+      buttont.addEventListener("click", function (event) {
+        deletecart(i);
+      });
+
+      newdiv.append(imgt, h3t, pt, buttont);
+      document.querySelector("#container").append(newdiv);
+      pricearr.push(+el.price);
+    });
+  }
+
+  function deletecart(index) {
+    dataArr.splice(index, 1);
+    localStorage.setItem("data", JSON.stringify(dataArr));
+    cart_print(dataArr);
+    calculate();
+  }
+
+  if (pricearr.length == 0) {
+    document.querySelector("h2>span").innerText = 0;
+  } else {
+    let price = pricearr.reduce(function (acc, el) {
+      return acc + el;
+    });
+
+    document.querySelector("h2>span").innerText = price;
+  }
+
+  function calculate() {
+    if (pricearr.length == 0) {
+      document.querySelector("h2>span").innerText = 0;
+
+      document.querySelector("h1>span").innerText = 0;
+    } else {
+      price = pricearr.reduce(function (acc, el) {
+        return acc + el;
+      });
+      document.querySelector("h2>span").innerText = price;
+
+      document.querySelector("h1>span").innerText = pricearr.length;
+    }
+  }
+
+  let count = 0;
+
+  document.querySelector("input+button").addEventListener("click", function () {
+    if (document.querySelector("input").value == "masai30" && count == 0) {
+      price *= 0.7;
+    }
+    document.querySelector("h2>span").innerText = price;
+    count++;
+  });
+
+  document
+    .querySelector("#payment")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      let form = document.querySelector("form");
+
+      let obj = {
+        name: form.name.value,
+        cardnumber: form.cardNumber.value,
+        Expiry: form.Expiry.value,
+        cvv: form.cvv.value,
+      };
+      if (
+        obj.cardnumber == "123456789123" &&
+        obj.Expiry == "2024-04-22" &&
+        obj.cvv == "255"
+      ) {
+        window.location.assign("OTP.html");
+      } else alert("plese type your correct card details");
+    });
+  let arr = [];
+  console.log(arr.length);
+</script>

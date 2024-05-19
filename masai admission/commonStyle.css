@@ -1,0 +1,33 @@
+.navbar {
+  width: 87%;
+  padding: 10px 20px;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+/* .navbar h1:hover {
+  color: rgb(255, 10, 10);
+} */
+thead {
+  background-color: hsl(180, 98%, 25%);
+  color: white;
+  font-size: 25px;
+}
+table {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+tbody > tr {
+  text-align: center;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+td {
+  padding: 10px 20px;
+}
+th {
+  padding: 10px 20px;
+}

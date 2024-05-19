@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      label {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+      input {
+        height: 30px;
+        width: 150px;
+        border-radius: 10px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="">Type your 4 digit OTP</label>
+    <br />
+    <input type="number" placeholder="type your OTP" />
+    <br />
+    <button>Submit</button>
+  </body>
+</html>
+
+<script>
+  document.querySelector("button").addEventListener("click", function () {
+    let otp = document.querySelector("input").value;
+    if (otp == "1234") {
+      alert("Login Sucessfully");
+    } else alert("Wrong Otp");
+  });
+</script>

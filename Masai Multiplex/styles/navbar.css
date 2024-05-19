@@ -1,0 +1,19 @@
+#navbar > h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: crimson;
+}
+#navbar > div {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+#navbar > div > a {
+  text-decoration: none;
+}

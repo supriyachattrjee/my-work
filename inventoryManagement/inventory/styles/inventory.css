@@ -1,0 +1,38 @@
+button {
+  display: block;
+  text-align: center;
+  padding: 7px 10px;
+  background-color: none;
+  font-weight: 800;
+  margin: auto;
+  margin-top: 30px;
+}
+button:hover {
+  border: none;
+  cursor: pointer;
+  background-color: aqua;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 800;
+}
+#products_data {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+#products_data > div {
+  border: 1px solid red;
+  border-radius: 5px;
+  text-align: center;
+}
+#products_data > div > img {
+  width: 100%;
+}
+#products_data > div > button:hover {
+  border: noen;
+  background-color: aqua;
+  cursor: pointer;
+}

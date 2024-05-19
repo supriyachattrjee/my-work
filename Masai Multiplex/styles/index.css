@@ -1,0 +1,32 @@
+#create > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: darkred;
+  text-decoration: dashed;
+  margin-top: 30px;
+}
+#create > form {
+  width: 32%;
+  padding: 20px 26px;
+  margin: auto;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+form > input,
+form > select {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#submit:hover {
+  background-color: coral;
+  border-radius: 15px;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: auto;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 20px;
+}

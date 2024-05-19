@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      a {
+        text-decoration: none;
+        color: coral;
+        text-align: center;
+      }
+      table {
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+        border: 0.5px solid gray;
+      }
+      thead {
+        background-color: aqua;
+        font-size: 20px;
+      }
+      td {
+        border-bottom: 1px solid gray;
+      }
+      tr {
+        text-align: center;
+      }
+      tbody tr > td:nth-child(1) > img {
+        width: 60px;
+      }
+      tbody tr > td:nth-child(6):hover {
+        color: red;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h3></h3>
+    </div>
+    <a href="Hompage.html"><h2>Homepage</h2></a>
+    <table>
+      <thead>
+        <tr>
+          <th>IMAGE</th>
+          <th>NAME</th>
+          <th>COURSE</th>
+          <th>UNIT</th>
+          <th>BATCH</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+  <script src="Dashboard.js"></script>
+  <script src="common.js"></script>
+</html>

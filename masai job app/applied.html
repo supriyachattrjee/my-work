@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    <select name="" id="byName">
+      <option value="">Sort By Name</option>
+      <option value="acc">Ascending</option>
+      <option value="dcc">Descending</option>
+    </select>
+
+    <select name="" id="bySalary">
+      <option value="">Sort By Salary</option>
+      <option value="high">High to Low</option>
+      <option value="low">Low to High</option>
+    </select>
+
+    <select name="" id="byRole">
+      <option value="">Filter By Role</option>
+      <option value="FSD">FSD</option>
+      <option value="Frontend">Frontend</option>
+      <option value="Backend">Backend</option>
+    </select>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+    let employee = JSON.parse(localStorage.getItem("employee"));
+
+    run(employee);
+    function run(emp) {
+      document.querySelector("tbody").innerHTML = "";
+      emp.forEach(function (obj) {
+        let ntr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = obj.name;
+        let td2 = document.createElement("td");
+        td2.innerText = obj.email;
+        let td3 = document.createElement("td");
+        td3.innerText = obj.role;
+        let td4 = document.createElement("td");
+        td4.innerText = obj.salary;
+        let td5 = document.createElement("td");
+        td5.innerText = "Bookmark";
+        td5.addEventListener("click", function () {
+          bookmark(obj);
+        });
+        ntr.append(td1, td2, td3, td4, td5);
+        document.querySelector("tbody").append(ntr);
+      });
+    }
+    let Bookmark = JSON.parse(localStorage.getItem("bookmark")) || [];
+    function bookmark(el) {
+      Bookmark.push(el);
+      localStorage.setItem("bookmark", JSON.stringify(Bookmark));
+    }
+
+    document.querySelector("#bySalary").addEventListener("change", function () {
+      let value = document.querySelector("#bySalary").value;
+
+      if (value == "low") {
+        employee.sort(function (a, b) {
+          return a.salary - b.salary;
+        });
+      } else if (value == "high") {
+        employee.sort(function (a, b) {
+          return b.salary - a.salary;
+        });
+      }
+
+      run(employee);
+    });
+    document.querySelector("#byName").addEventListener("change", function () {
+      let value = document.querySelector("#byName").value;
+      if (value == "acc") {
+        employee.sort(function (a, b) {
+          if (a.name < b.name) {
+            return -1;
+          } else if (a.name > b.name) {
+            return 1;
+          } else return 0;
+        });
+      } else if (value == "dcc") {
+        employee.sort(function (a, b) {
+          if (a.name < b.name) {
+            return 1;
+          } else if (a.name > b.name) {
+            return -1;
+          } else return 0;
+        });
+      }
+      run(employee);
+    });
+
+    document.querySelector("#byRole").addEventListener("change", function () {
+      let value = document.querySelector("#byRole").value;
+      let filter = employee.filter(function (el) {
+        return el.role == value;
+      });
+      run(filter);
+    });
+    //you need to code here
+  </script>
+</html>
