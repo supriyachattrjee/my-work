@@ -1,0 +1,17 @@
+#money {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#money + div {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+#money + div * {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}

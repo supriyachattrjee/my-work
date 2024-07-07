@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+      form {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+      }
+      form > input {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+      }
+      #submit:hover {
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <form
+      action="
+
+"
+    >
+      <label for="">UserName</label>
+      <input type="text" id="username" />
+      <label for="">Password</label>
+      <input type="password" id="password" />
+      <input type="submit" value="Sign Up" id="submit" />
+    </form>
+  </body>
+</html>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.querySelector("#nav").innerHTML = navbar();
+
+  let form = document.querySelector("form");
+  form.addEventListener("submit", function () {
+    let obj = {
+      user: form.username.value,
+      pass: form.password.value,
+    };
+    if (form.username.value == "" || form.password.value == "") {
+      alert("plese fill all the boxes");
+    } else if (form.password.value.length < 8) {
+      alert("plese fill the form with 8 digit cherecter");
+    } else {
+      localStorage.setItem("credential", JSON.stringify(obj));
+    }
+  });
+
+  import buttonfun from "./script/navbarB.js";
+  buttonfun();
+</script>

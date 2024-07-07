@@ -1,0 +1,10 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#movie {
+  width: 50%;
+  margin: auto;
+}

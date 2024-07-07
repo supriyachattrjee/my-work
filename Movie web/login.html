@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+      form {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+      }
+      form > input {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+      }
+      #submit:hover {
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <form
+      action="
+
+"
+    >
+      <label for="">UserName</label>
+      <input type="text" id="username" />
+      <label for="">Password</label>
+      <input type="password" id="password" />
+      <input type="submit" value="Login" id="submit" />
+    </form>
+  </body>
+</html>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.querySelector("#nav").innerHTML = navbar();
+  let form = document.querySelector("form");
+  form.addEventListener("submit", function () {
+    let user = form.username.value;
+    let pass = form.password.value;
+    let cred = JSON.parse(localStorage.getItem("credential"));
+    if (user != cred.user || pass != cred.pass) {
+      alert("plese type your correct credential");
+    } else {
+      alert("Login Sucessfully");
+    }
+  });
+  import buttonfunc from "./script/navbarB.js";
+  buttonfunc();
+</script>

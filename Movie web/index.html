@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+      #slideshow {
+        width: 100%;
+        height: 450px;
+      }
+      #slideshow > img {
+        width: 100%;
+        height: 100%;
+      }
+      #allMovie {
+        margin: auto;
+        width: 75%;
+        height: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      #allMovie > div {
+        text-align: center;
+        border: 1px solid black;
+      }
+      #allMovie > div > img {
+        width: 100%;
+        height: 150px;
+      }
+      #ratingSort {
+        display: block;
+        margin: auto;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: crimson;
+        border: 1px solid maroon;
+        background-color: transparent;
+        margin-top: 20px;
+        border-radius: 20px;
+      }
+      #loder {
+        width: 40%;
+        margin: auto;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div id="slideshow"></div>
+    <select name="" id="ratingSort">
+      <option value="">Sort By Ratings</option>
+      <option value="ltoh">Sort by low rating to high</option>
+      <option value="htol">Sort by High rating to low</option>
+    </select>
+    <div id="loder">
+      <img
+        src="https://media0.giphy.com/media/wvtt4mtViPOSrLYNFh/giphy.webp?cid=790b76111vudfvziul5d5gsv0wiclabajm5lblsl3cwx9zkl&ep=v1_gifs_search&rid=giphy.webp&ct=g"
+        alt=""
+      />
+    </div>
+    <div id="allMovie"></div>
+  </body>
+</html>
+<script type="module" src="index.js"></script>

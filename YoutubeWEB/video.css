@@ -1,0 +1,79 @@
+#container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 80px;
+}
+/* #container > div {
+} */
+#videoInfo {
+  flex: 6;
+}
+#videoInfo > iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+}
+#sugetion {
+  flex: 4;
+}
+#chanel {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+}
+#chanel > div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+#chanel > div:nth-child(1) > button {
+  width: 40%;
+  height: 70%;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+#sugetion > div {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  gap: 5%;
+}
+#sugetion > div:hover {
+  background-color: rgb(156, 162, 167);
+  cursor: pointer;
+}
+#sugetion > div > img {
+  flex: 5;
+}
+#sugetion > div > div:nth-child(2) {
+  flex: 6;
+}
+#sugetion > div > img {
+  height: 98%;
+  border-radius: 10px;
+}
+#Rating > button {
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+}
+#Rating > button:hover {
+  cursor: pointer;
+}
+#subscribe:hover {
+  cursor: pointer;
+  background-color: rgb(97, 96, 96);
+}

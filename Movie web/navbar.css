@@ -1,0 +1,47 @@
+#nav {
+  width: 95%;
+  height: 60px;
+  margin: auto;
+  background-color: rgb(63, 61, 61);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 2%;
+  color: white;
+  position: sticky;
+  overflow: visible;
+  top: 0;
+}
+#auth {
+  display: flex;
+  color: white;
+  width: 20%;
+  justify-content: space-between;
+}
+#nav h3 {
+  cursor: pointer;
+  background-color: rgb(26, 0, 5);
+  color: aqua;
+  border-radius: 3px;
+}
+#search {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 0px 10px;
+}
+#search:hover {
+  cursor: pointer;
+  color: rgb(145, 1, 29);
+  background-color: rgb(128, 57, 71);
+}
+#search > img {
+  height: 50%;
+  margin-top: 20%;
+}
+#search > h2 {
+  color: crimson;
+}
